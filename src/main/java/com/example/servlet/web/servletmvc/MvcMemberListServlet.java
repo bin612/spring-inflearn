@@ -25,6 +25,7 @@ public class MvcMemberListServlet extends HttpServlet {
         //setAttribute를 기준으로 가져온다.
         request.setAttribute("members", members);
 
+        //url : member.jsp 확장자 필수
         String viewPath = "/WEB-INF/views/members.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
